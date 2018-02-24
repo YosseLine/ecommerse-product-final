@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+   </head>
+  <body>
+
+    <!--header-->
+    <header>
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+         <a href="#" class="brand-logo">Logo</a>
+         <a class="button-collapse modal-trigger" href="#menuMovile"><i class="material-icons">menu</i></a>
+         <ul id="nav-mobile" class="right">
+           <li><a><i class="material-icons">add_shopping_cart</i></a></li>
+         </ul>
+         <!--ESTRUCTURA DEL NAVEGADOR MOVILE INFERIOR -->
+         <div id="menuMovile" class="modal bottom-sheet">
+          <div class="modal-content">
+            <h4>kjssjkks</h4>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+        <!--FIN DE ESTRUCTURA DEL NAVEGADOR MOVILE INFERIOR -->
+       </div>
+       <div class="nav-content">
+         <div class="row">
+           <div class="col s12">
+             <form>
+              <div class="input-field col s12">
+                <input id="search" type="search"  required class="margin-btm-0 validate" placeholder="Buscar...">
+                <label class="label-icon" for="search"></label>
+              </div>
+            </form>
+           </div>
+         </div>
+       </div>
+      </nav>
+    </header>
+
+    <!--PRIMER COMPONENT, QUE SE VISUALIZARÁ POR DEFECTO-->
+    <main>
+      <div class="container width-90">
+        <div class="row">
+          <!--EL CONTENEDOR PRINCIPAL DE LOS CARDS-->
+          <div id="box-cards">
+            <!--CARDS EJEMPLO-->
+            <div class="col s6 m6 l3 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <a class="waves-effect modal-trigger" href="#modal2"><img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp" class="img-responsive"></a>
+                  <a class="btn-floating halfway-fab waves-effect waves-light red style-btn-floating">Añadir a carrito</a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Item</span>
+                  <p>Precio: <span>precio</span> </p>
+                </div>
+              </div>
+            </div>
+            <!--MODAL IMÁGENES-->
+            <div id="modal2" class="modal">
+              <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+              </div>
+            </div>
+
+            <div class="col s6 m6 l3 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <a class="waves-effect modal-trigger" href="#modal2"><img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp" class="img-responsive"></a>
+                  <a class="btn-floating halfway-fab waves-effect waves-light red style-btn-floating">Añadir a carrito</a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Item</span>
+                  <p>Precio: <span>precio</span> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+<!--COMPONENT QUE SE VISUALIZARÁ CUANDO EL USUARIO DE CLICK AL ÍCONO DEL CARRITO Y NO HAYA NINGÚN ITEM>
+    <main>
+      <div class="container">
+        <div class="container-flexbox-column">
+          <div class="row">
+            <div class="col s12">
+              <i class="material-icons center-align icon-carrito">add_shopping_cart</i>
+            </div>
+            <div class="col s12">
+              <h2 class="center-align">Aún no has agregado un item a tu carrito de compras!</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>-->
+
+    <!--COMPONENT QUE SE ACTIVARÁ CUANDO EL USUARIO DE CLICK AL CARRITO Y TENGA MÁS DE UN ITEM>
+    <main>
+      <div class="container width-90">
+        <div class="row">
+          <div class="col s12">
+            <h3 class="center-align"><span>0 </span>Items en tu carrito</h3>
+          </div>
+        </div>
+        <div class="row">
+          <!CONTENEDOR DE LOS ITEMS DE COMPRA>
+          <div id="">
+            <div class="col s12 m6 l3">
+              <div class="card">
+                <div class="card-content">
+                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">close</i></a>
+                  <span class="card-title">Item</span>
+                  <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp" class="responsive-img">
+                  <p>Descripcción del item.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>-->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script   src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"       crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

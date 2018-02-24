@@ -1,0 +1,35 @@
+/*ESTILOS PARA NAV*/
+
+/*ESTILOS PARA INPUT*/
+input[type=search].margin-btm-0:not(.browser-default){
+  margin-bottom: 0;
+}
+nav i.material-icons.line-height-12{
+  line-height: 12px;
+}
+input[type=search].padding-left-input{
+  padding-left: 50px;
+}
+/*ESTILOS PARA EL CONTAINER*/
+div.container.width-90{
+  width: 90%;
+}
+/*ESTILOS PARA LOS CARDS*/
+a.btn-floating.style-btn-floating{
+  width: 120px;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+}
+
+/*ESTILOS PARA COMPONENT DEL CARRITO DE COMPRAS*/
+.container-flexbox-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+}
+i.material-icons.icon-carrito{
+  width: 100%;
+  font-size: 120px;
+}
