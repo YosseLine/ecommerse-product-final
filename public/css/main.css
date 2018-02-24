@@ -8,6 +8,13 @@
 .width-input-80{
   width: 80%;
 }
+a.logo-header{
+  font-family: 'Indie Flower', cursive;
+  margin-left: 20px;
+}
+nav{
+  background-color: rgba(255,104,104,0.8);
+}
 /*ESTILOS PARA INPUT*/
 input[type=search].margin-btm-0:not(.browser-default){
   margin-bottom: 0;
@@ -18,7 +25,13 @@ nav i.material-icons.line-height-12{
 input[type=search].padding-left-input{
   padding-left: 30px;
 }
+i.material-icons.line-height-50{
+  line-height: 50px;
+}
 /*ESTILOS PARA EL CONTAINER*/
+.btn-style{
+  background-color: rgb(255,104,104);
+}
 div.container.width-90{
   width: 90%;
 }
