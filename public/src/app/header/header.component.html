@@ -1,0 +1,60 @@
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+     <a href="#" class="brand-logo logo-header">Meraki</a>
+     <a class="waves-effect waves-light button-collapse modal-trigger" href="#menuMovile" (click)="openModal()"><i class="material-icons">menu</i></a>
+       <div class="box-absolute show-on-large hide-on-med-and-down height-100 width-input-80">
+       <div class="container height-100">
+         <div class="row height-100 margin-btm-0">
+           <div class="col l9 push-l4 height-100">
+             <form class="height-100">
+               <div class="input-field">
+                 <input id="search" type="search" required class="margin-btm-0 ">
+                 <label class="label-icon" for="search"><i class="material-icons line-height-50">search</i></label>
+                 <i class="material-icons">close</i>
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+     <ul id="nav-mobile" class="right">
+       <li><a><i class="material-icons">add_shopping_cart</i></a></li>
+     </ul>
+     <!--ESTRUCTURA DEL NAVEGADOR MOVILE INFERIOR -->
+     <div id="menuMovile" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4 class="text-blacks">kjssjkks</h4>
+
+      </div>
+      <div class="modal-footer">
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" (click)="openModal()">Agree</a>
+        <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"></a> -->
+      </div>
+    </div>
+    <!--FIN DE ESTRUCTURA DEL NAVEGADOR MOVILE INFERIOR -->
+   </div>
+   <div class="nav-content">
+     <div class="row">
+       <div class="col s12">
+         <form class="show-on-small hide-on-med-and-up">
+          <div class="input-field col s11">
+            <input id="search" type="search"  required class="margin-btm-0 validate padding-left-input" placeholder="Buscar...">
+            <label class="label-icon" for="search"></label>
+          </div>
+        </form>
+       </div>
+     </div>
+   </div>
+  </nav>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  <div class="modal-content">
+
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Close</a>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
