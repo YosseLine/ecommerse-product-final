@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { MainComponent } from './main/main.component';
+import { AsideComponent } from './aside/aside.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { MainComponent } from './main/main.component';
     AppComponent,
     HeaderComponent,
     MeuPrimeiroComponent,
-    MainComponent
+    MainComponent,
+    AsideComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
