@@ -4,23 +4,7 @@
       <!--EL CONTENEDOR PRINCIPAL DE LOS CARDS-->
       <div id="box-cards" class="col m12">
         <!--CARDS EJEMPLO-->
-        <div class="col s6 m6 l3 xl3">
-          <div class="card">
-            <div class="card-image">
-              <a class="waves-effect modal-trigger" href="#modal2">
-                <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp"
-                  class="img-responsive">
-              </a>
-              <a class="btn-floating halfway-fab waves-effect waves-light style-btn-floating btn-style">Añadir a carrito</a>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Item</span>
-              <p>Precio:
-                <span>precio</span>
-              </p>
-            </div>
-          </div>
-        </div>
+
         <!--MODAL IMÁGENES-->
         <div id="modal2" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
           <div class="modal-content">
@@ -44,86 +28,69 @@
             </div>
           </div>
         </div>
-
-        <div class="col s6 m6 l3 xl3">
-            <div class="card">
-              <div class="card-image">
-                <a class="waves-effect modal-trigger" href="#modal2">
-                  <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp"
-                    class="img-responsive">
-                </a>
-                <a class="btn-floating halfway-fab waves-effect waves-light style-btn-floating btn-style">Añadir a carrito</a>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Item</span>
-                <p>Precio:
-                  <span>precio</span>
-                </p>
-              </div>
-            </div>
-          </div>
       </div>
-      <div id="box-cards" class="col m12">
-          <!--CARDS EJEMPLO-->
-          <div class="col s6 m6 l3 xl3">
-            <div class="card">
-              <div class="card-image">
-                <a class="waves-effect modal-trigger" href="#modal2">
-                  <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp"
-                    class="img-responsive">
-                </a>
-                <a class="btn-floating halfway-fab waves-effect waves-light style-btn-floating btn-style">Añadir a carrito</a>
-              </div>
-              <div class="card-content">
-                <span class="card-title">Item</span>
-                <p>Precio:
-                  <span>precio</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--MODAL IMÁGENES-->
-          <div id="modal2" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
-            <div class="modal-content">
-              <h4 class="center-align">Nombre item</h4>
-              <div class="container">
-                <div class="row">
-                  <div class="col s6">
-                    <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp"
-                      class="responsive-img">
-                  </div>
-                  <div class="col s6">
-                    <h6>Descripción:
-                      <span>Breve descripción</span>
-                    </h6>
-                    <h6>Precio:
-                      <span>123</span>
-                    </h6>
-                    <a class="waves-effect waves-light btn modal-action modal-close btn-style">Añadir a carrito</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</main>
 
-          <div class="col s6 m6 l3 xl3">
+<script>
+
+  var boxCards = document.getElementById('box-cards');
+  function getItems(event) {
+    let url = `https://api.mercadolibre.com/sites/MLA/search?q=laptops`;
+    fetch(url)
+      .then(handleError)
+      .then(parseJSON)
+      .then(addNews)
+      .catch(displayError);
+  };
+
+  function handleError(res) {
+    if (!res.ok) {
+      throw Error(res.status);
+    }
+    return res;
+  }
+
+  function parseJSON(res) {
+    return res.json().then(function (data) {
+      var img = data.results;
+      console.log(img);
+      img.forEach(element => {
+
+        boxCards.innerHTML += (`<div class="col s6 m4 l3 xl3">
               <div class="card">
                 <div class="card-image">
                   <a class="waves-effect modal-trigger" href="#modal2">
-                    <img src="https://http2.mlstatic.com/medias-largas-tipo-tumblr-hasta-la-rodilla-D_NQ_NP_703526-MLV25870884581_082017-F.webp"
-                      class="img-responsive">
+                    <img src= ${element.thumbnail}class="img-responsive">
                   </a>
                   <a class="btn-floating halfway-fab waves-effect waves-light style-btn-floating btn-style">Añadir a carrito</a>
                 </div>
                 <div class="card-content">
-                  <span class="card-title">Item</span>
+                  <span class="card-title">${element.title}</span>
                   <p>Precio:
-                    <span>precio</span>
+                    <span>${element.price}</span>
                   </p>
                 </div>
               </div>
-            </div>
-        </div>
-    </div>
-  </div>
-</main>
+            </div>`);
+
+        /*  loca.innerHTML+=(`<img src= ${element.thumbnail}><p>${element.price}</p><p>${element.title}</p>`); */
+
+
+      });
+    })
+  }
+
+  function addNews(data) {
+
+  }
+
+  function displayError(err) {
+    console.log("Hubo un error");
+    console.log(err);
+  }
+
+
+
+</script>

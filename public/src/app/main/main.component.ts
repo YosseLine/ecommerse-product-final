@@ -20,4 +20,7 @@ export class MainComponent implements OnInit {
   closeModal() {
     this.modalActions.emit({ action: "modal", params: ['close'] });
   }
+
+
+  
 }
